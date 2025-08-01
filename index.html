@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng hợp Lộ trình Nhận thức về Con người</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+        .toc-item {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+        }
+        .toc-item.active, .toc-item:hover {
+            background-color: #e0e7ff;
+            color: #4f46e5;
+        }
+        .content-panel {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .content-panel.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .toc-session-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .toc-session-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .toc-session-header.open + .toc-session-content {
+             max-height: 500px; /* Adjust as needed */
+        }
+        .toc-session-header .arrow {
+            transition: transform 0.3s ease-out;
+        }
+        .toc-session-header.open .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-6 lg:p-8">
+    <div class="max-w-screen-xl mx-auto">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-2">Lộ trình Nhận thức về Con người</h1>
+            <p class="text-slate-600">Tổng hợp nội dung 8 buổi học. Nhấp vào các mục để xem chi tiết.</p>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col md:flex-row min-h-[80vh]">
+            <!-- Table of Contents (Left Panel) -->
+            <aside id="toc" class="w-full md:w-1/3 lg:w-1/4 bg-slate-50 border-r border-slate-200 p-4 md:p-6 overflow-y-auto">
+                <h2 class="text-lg font-bold text-slate-800 mb-4">Mục lục</h2>
+                <nav class="space-y-2">
+                    <!-- Buoi 1 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200 open">
+                            <h3 class="font-bold text-slate-700">Buổi 1: Nhận thức về nhận thức</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b1-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm active">1. Tại sao Con người Quan trọng?</a></li>
+                            <li><a data-target="b1-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Nhận thức là Gốc rễ</a></li>
+                            <li><a data-target="b1-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Công thức Nhân Quả</a></li>
+                            <li><a data-target="b1-4" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">4. Mục Tiêu Của Lộ Trình</a></li>
+                        </ul>
+                    </div>
+                    <!-- Buoi 2 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 2: Nhận thức về Tánh Phật</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b2-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Các Thành Phần Của Con Người</a></li>
+                            <li><a data-target="b2-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Nhận thức về Sự Chân Thật</a></li>
+                            <li><a data-target="b2-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Ứng dụng Sự Chân Thật</a></li>
+                        </ul>
+                    </div>
+                     <!-- Buoi 3 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 3: 9 Dạng Người</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b3-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Năng lượng Gốc của Con người</a></li>
+                            <li><a data-target="b3-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Chìa khóa Làm chủ Nội tâm</a></li>
+                            <li><a data-target="b3-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Giới thiệu 9 Dạng Người</a></li>
+                            <li><a data-target="b3-4" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">4. Nguyên tắc Kết giao Trí tuệ</a></li>
+                            <li><a data-target="b3-5" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">5. Xây dựng Nhân hiệu & Bài tập</a></li>
+                        </ul>
+                    </div>
+                     <!-- Buoi 4 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 4: Cao Nhân & Quý Nhân</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b4-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Cao Nhân</a></li>
+                            <li><a data-target="b4-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Quý Nhân</a></li>
+                            <li><a data-target="b4-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Tư duy Bảo hộ Phước báu</a></li>
+                            <li><a data-target="b4-4" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">4. Bài tập Thực hành</a></li>
+                        </ul>
+                    </div>
+                     <!-- Buoi 5 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 5: Nhân Mạch</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b5-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Nhận dạng Nhân Mạch</a></li>
+                            <li><a data-target="b5-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Đối đãi với Nhân Mạch</a></li>
+                            <li><a data-target="b5-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Thu hút Nhân Mạch</a></li>
+                            <li><a data-target="b5-4" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">4. Tâm thức Cho đi & Thu hút</a></li>
+                        </ul>
+                    </div>
+                    <!-- Buoi 6 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 6: Thần Tài & Nhân Tài</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b6-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Thần Tài</a></li>
+                            <li><a data-target="b6-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Nhân Tài (Giới thiệu)</a></li>
+                            <li><a data-target="b6-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Chìa khóa Thu hút Con người</a></li>
+                        </ul>
+                    </div>
+                    <!-- Buoi 7 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 7: Nhân Tài & Minh Sư</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b7-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Đối đãi với Nhân Tài</a></li>
+                            <li><a data-target="b7-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. 8 Tố chất của Nhân Tài</a></li>
+                            <li><a data-target="b7-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Minh Sư</a></li>
+                            <li><a data-target="b7-4" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">4. Đối đãi & Thu hút Minh Sư</a></li>
+                        </ul>
+                    </div>
+                     <!-- Buoi 8 -->
+                    <div>
+                        <div class="toc-session-header flex justify-between items-center p-2 rounded-lg hover:bg-slate-200">
+                            <h3 class="font-bold text-slate-700">Buổi 8: Thầy Cô & Chuyên Gia</h3>
+                            <svg class="arrow w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                        </div>
+                        <ul class="toc-session-content pl-2 space-y-1 pt-1">
+                            <li><a data-target="b8-1" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">1. Thầy Cô</a></li>
+                            <li><a data-target="b8-2" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">2. Chuyên Gia</a></li>
+                            <li><a data-target="b8-3" class="toc-item block p-2 rounded-md font-medium text-slate-600 text-sm">3. Lộ trình trở thành Chuyên Gia</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content (Right Panel) -->
+            <main id="content-area" class="w-full md:w-2/3 lg:w-3/4 p-6 md:p-8 lg:p-10 overflow-y-auto">
+                <!-- Buoi 1 -->
+                <div id="b1-1" class="content-panel active"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Tại sao Con người Quan trọng?</h3><div class="space-y-4 text-slate-700 text-lg leading-relaxed"><p class="p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-300">Mọi thứ trong nhân sinh đều xoay quanh con người.</p><p class="p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-300">Tương tác giữa người với người quyết định mọi trải nghiệm (hạnh phúc, khổ đau).</p><p class="p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-300">Thành tựu của một người đều do con người mang lại.</p><p class="p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-300">Con người là "cỗ máy công đức phước đức", chỉ tương tác với con người mới tích tạo được phước báu.</p></div></div>
+                <div id="b1-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Nhận thức là Gốc rễ của Chuyển hóa</h3><p class="text-slate-600 mb-6">Thay vì thay đổi hành động bề mặt, chúng ta cần thay đổi nhận thức từ gốc rễ để có sự chuyển hóa bền vững.</p><div class="flex flex-col md:flex-row justify-around items-center space-y-4 md:space-y-0 text-center"><div class="p-4 bg-indigo-100 rounded-xl shadow-sm"><span class="font-bold text-indigo-800">NHẬN THỨC</span><p class="text-sm text-indigo-600">(Biết, Tin, Hiểu)</p></div><span class="font-bold text-3xl text-slate-400">&rarr;</span><div class="p-4 bg-purple-100 rounded-xl shadow-sm"><span class="font-bold text-purple-800">TƯ DUY</span><p class="text-sm text-purple-600">(Suy nghĩ)</p></div><span class="font-bold text-3xl text-slate-400">&rarr;</span><div class="p-4 bg-pink-100 rounded-xl shadow-sm"><span class="font-bold text-pink-800">HÀNH ĐỘNG</span><p class="text-sm text-pink-600">(Hành vi)</p></div><span class="font-bold text-3xl text-slate-400">&rarr;</span><div class="p-4 bg-green-100 rounded-xl shadow-sm"><span class="font-bold text-green-800">KẾT QUẢ</span><p class="text-sm text-green-600">(Quả Như Ý)</p></div></div></div>
+                <div id="b1-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Công thức Kiến tạo Nhân Quả</h3><div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white p-8 rounded-2xl text-center shadow-2xl"><p class="text-3xl font-bold">Nhân Tốt + Duyên Lành = Quả Như Ý</p></div><div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-4 border rounded-lg"><h4 class="font-bold text-xl text-slate-800 mb-2">Nhân Tốt</h4><p class="text-slate-600">Là những hạt mầm bên trong: Trí tuệ, Tâm thái, Nhân cách, Phẩm chất, Năng lực, Thể chất.</p></div><div class="p-4 border rounded-lg"><h4 class="font-bold text-xl text-slate-800 mb-2">Duyên Lành</h4><p class="text-slate-600">Là những mối quan hệ tốt đẹp, được tạo ra từ việc có nhận thức đủ đầy về con người.</p></div></div></div>
+                <div id="b1-4" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">5 Mục Tiêu Của Lộ Trình</h3><ol class="list-none space-y-4"><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">1</span><span class="text-slate-700 text-lg"><strong>Nhận diện</strong> các dạng người quan trọng (Quý nhân, Thần tài, Nhân mạch...).</span></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">2</span><span class="text-slate-700 text-lg">Học cách <strong>thu hút</strong> những nhân duyên tốt đẹp đến với mình.</span></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">3</span><span class="text-slate-700 text-lg">Học cách <strong>đối đãi</strong> đúng đắn để giữ gìn mối quan hệ.</span></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">4</span><span class="text-slate-700 text-lg">Học cách để <strong>trở thành</strong> người có giá trị trong mắt người khác.</span></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">5</span><span class="text-slate-700 text-lg">Học cách <strong>nâng cấp</strong> mối quan hệ lên mức Thân Thiết - Tin Tưởng.</span></li></ol></div>
+                <!-- Buoi 2 -->
+                <div id="b2-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Các Thành Phần Cấu Tạo Nên Con Người</h3><div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700"><div class="p-4 bg-slate-50 rounded-lg"><h4 class="font-semibold text-slate-800 mb-2">Cấu trúc Con người</h4><ul class="list-disc list-inside"><li>Tâm (Sự Chân Thật / Tánh Không)</li><li>Tánh (16 tánh người)</li><li>Tình (8 muôn 4000 bong bóng ảo giác)</li><li>Thân (Thân tứ đại)</li></ul></div><div class="p-4 bg-slate-50 rounded-lg"><h4 class="font-semibold text-slate-800 mb-2">Các Khối & Nghiệp</h4><ul class="list-disc list-inside"><li><strong>3 Khối Đức:</strong> Công đức, Phước đức, Ác đức</li><li><strong>Tổng Nghiệp:</strong> Nghiệp Thức, Nghiệp Duyên, Nghiệp Quả</li></ul></div><div class="p-4 bg-slate-50 rounded-lg md:col-span-2"><h4 class="font-semibold text-slate-800 mb-2">7 Sự Giàu Toàn Diện (Nhân)</h4><p>Trí tuệ, Tâm thái, Nhân cách, Phẩm chất, Năng lực, Thể chất, Vật chất.</p></div></div></div>
+                <div id="b2-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Nhận thức về Sự Chân Thật (Tánh Phật)</h3><div class="p-6 bg-indigo-50 rounded-xl border-l-4 border-indigo-400 mb-6"><p class="text-xl font-semibold text-indigo-800">Sự Chân Thật là những gì <span class="underline decoration-wavy">không thay đổi</span> qua không gian và thời gian.</p></div><div class="space-y-4"><p>Con người đau khổ vì bám trụ vào những thứ **thay đổi**: tiền tài, danh vọng, tình cảm, sức khỏe... Khi những thứ này thay đổi, nội tâm trở nên bất ổn, mất cân bằng.</p><p>Chỉ khi bám trụ vào **Sự Chân Thật** không đổi, nội tâm mới có thể cân bằng, từ đó trí tuệ khởi sinh.</p><div class="p-4 bg-green-100 rounded-lg text-green-800"><p class="font-bold">Vậy Sự Chân Thật là gì?</p><p>Đó là **Ý Nghe, Ý Thấy, Ý Nói, Ý Biết**.</p><p class="text-sm mt-2">Chúng ta nghe/thấy/nói/biết **cái gì** thì thay đổi, nhưng bản tánh **luôn luôn nghe, luôn luôn thấy, luôn luôn nói, luôn luôn biết** thì không bao giờ thay đổi.</p></div></div></div>
+                <div id="b2-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Ứng dụng Sự Chân Thật</h3><p class="mb-4 text-lg">Đây là điều kiện tiên quyết để có nhận thức đủ đầy về mọi khía cạnh trong nhân sinh.</p><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-semibold text-slate-800 mb-2">Khi nào cần ứng dụng?</p><p class="mb-4">Khi nội tâm bất ổn (lo lắng, sợ hãi, buồn bã, sân giận...) do dính mắc vào một sự việc, một lời nói, một con người...</p><p class="font-semibold text-slate-800 mb-2">Làm thế nào?</p><ol class="list-decimal list-inside space-y-2 mb-4"><li>Nhận biết mình đang dính mắc vào sự thay đổi.</li><li>Chủ động quay về, an trú vào **Sự Chân Thật** bên trong.</li><li>Chỉ "Nghe thì biết là nghe, Thấy thì biết là thấy", không phân tích, không phán xét, không để lớp Tánh và Tình khởi lên.</li></ol><p class="font-semibold text-slate-800 mb-2">Kết quả:</p><p class="p-4 bg-indigo-50 rounded-lg">Nội tâm trở về trạng thái **cân bằng**. Trí tuệ khởi sinh, giúp ta biết cách đối nhân xử thế phù hợp và sáng suốt nhất tại thời điểm đó.</p></div></div>
+                <!-- Buoi 3 -->
+                <div id="b3-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Năng lượng Gốc của Con người</h3><div class="p-6 bg-indigo-50 rounded-xl border-l-4 border-indigo-400 mb-6"><p class="text-xl font-semibold text-indigo-800">Bản chất, năng lượng của con người luôn là <span class="underline decoration-wavy">siêu cao</span>, xuất phát từ Sự Chân Thật bên trong.</p></div><p class="text-slate-700 mb-4">Tuy nhiên, năng lượng này bị hạ thấp khi đi qua các lớp bên ngoài:</p><ul class="space-y-3"><li class="flex items-start"><span class="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0 font-bold">&darr;</span><div><strong>Lớp Tánh:</strong> Tham và Tưởng về Tài, Sắc, Danh, Thực, Thùy làm biến đổi điện từ, hạ năng lượng.</div></li><li class="flex items-start"><span class="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0 font-bold">&darr;</span><div><strong>Lớp Tình:</strong> Các trạng thái cảm xúc (8 muôn 4000 bong bóng ảo giác) tiếp tục làm hao tổn năng lượng.</div></li><li class="flex items-start"><span class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0 font-bold">&darr;</span><div><strong>Lớp Thân:</strong> Cơ thể (thân tứ đại) không khỏe mạnh làm năng lượng suy giảm thêm.</div></li></ul><p class="mt-6 p-4 bg-green-100 rounded-lg text-green-800 font-medium">Nhận thức được điều này giúp ta không tìm kiếm năng lượng từ bên ngoài mà quay về làm chủ các lớp Tánh, Tình, Thân của chính mình.</p></div>
+                <div id="b3-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Chìa khóa Làm chủ Nội tâm</h3><p class="text-slate-600 mb-6">Để giữ năng lượng luôn ở mức cao và siêu cao, hãy luân chuyển 3 trạng thái sau:</p><div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center"><div class="p-6 bg-blue-100 rounded-xl shadow"><h4 class="font-bold text-xl text-blue-800 mb-2">Tâm An Vui</h4><p class="text-blue-700">Đón nhận mọi thứ bằng Sự Chân Thật. Trạng thái này giúp xóa đi **đau khổ**.</p></div><div class="p-6 bg-purple-100 rounded-xl shadow"><h4 class="font-bold text-xl text-purple-800 mb-2">Tánh Bao Dung</h4><p class="text-purple-700">Không dính mắc vào lỗi của người. Trạng thái này giúp xóa đi **sân hận**.</p></div><div class="p-6 bg-pink-100 rounded-xl shadow"><h4 class="font-bold text-xl text-pink-800 mb-2">Tình Trân trọng Biết ơn</h4><p class="text-pink-700">Ghi nhận sự hiện diện của người khác. Trạng thái này giúp xóa đi **oán trách**.</p></div></div></div>
+                <div id="b3-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">9 Dạng Người Quý trong Cuộc đời</h3><p class="text-slate-600 mb-4">Đã là con người, họ luôn là một trong chín dạng người này. Việc của chúng ta là nhận diện, thu hút, đối đãi và trở thành họ.</p><div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm"><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-red-400"><strong>1. Cao Nhân</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-orange-400"><strong>2. Quý Nhân</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-amber-400"><strong>3. Nhân Mạch</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-yellow-400"><strong>4. Thần Tài</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-lime-400"><strong>5. Nhân Tài</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-green-400"><strong>6. Minh Sư</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-teal-400"><strong>7. Thầy Cô</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-cyan-400"><strong>8. Chuyên Gia</strong></div><div class="p-4 bg-slate-50 rounded-lg border-l-4 border-sky-400"><strong>9. Thiện Tri Thức</strong></div></div></div>
+                <div id="b3-4" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Nguyên tắc Kết giao Trí tuệ</h3><p class="text-slate-600 mb-4">Người bình thường kết giao vì thấy người khác "là ai". Cách này có giới hạn.</p><div class="p-6 bg-gradient-to-r from-teal-400 to-blue-500 text-white rounded-xl shadow-lg"><p class="text-xl font-bold">Người có trí tuệ kết giao vì thấy người khác "không là ai".</p><blockquote class="mt-2 border-l-4 border-white pl-4 italic">"Bởi vì bạn không là ai, nên bạn có thể trở thành bất kỳ ai."</blockquote></div><div class="mt-6 space-y-3 text-slate-700"><p>Nhận thức này giúp ta trân trọng mọi nhân duyên, không bỏ lỡ những con người giá trị chỉ vì hiện tại họ chưa thể hiện ra.</p></div></div>
+                <div id="b3-5" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Xây dựng Nhân hiệu & Bài tập</h3><p class="mb-4 text-lg">Bạn chủ động xây dựng hình ảnh của mình hay để người khác tự nghĩ về bạn?</p><div class="bg-white p-6 rounded-lg shadow-md mb-6"><p class="font-semibold text-slate-800 mb-2">Nguyên tắc kiến tạo nhân hiệu:</p><p class="p-4 bg-indigo-50 rounded-lg italic">"Mình nói về mình không phải là mình. Người khác nói về mình không phải là mình. <span class="font-bold not-italic text-indigo-700">Nhưng mình nói về người khác... chính là mình.</span>"</p><p class="mt-4">Muốn trở thành người như thế nào, hãy nhìn thấy và nói về những điểm đó ở người khác.</p></div><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-slate-800 mb-2">Bài tập thực hành:</p><ol class="list-decimal list-inside space-y-2"><li>Viết ra câu trả lời: "Tôi muốn người khác có hình ảnh gì khi nhắc đến tôi?"</li><li>Bắt đầu từ hôm nay, khi gặp bất kỳ ai, hãy tìm và nói về những điểm tốt đẹp đó ở họ.</li></ol></div></div>
+                <!-- Buoi 4 -->
+                <div id="b4-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Cao Nhân</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-red-400">Là người cho ta một **quan niệm**, một **bài học**, một **hiểu biết** mà từ đó, nhận thức của ta **đứng trên vấn nạn phát sinh**.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-red-400">**Tri Phúc - Trọng Phúc - Tạo Phúc:** Biết ơn bài học, trân trọng bài học và mang bài học đó đi lan tỏa, giúp đỡ người khác.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-red-400">Cao nhân bị thu hút bởi người có nguồn năng lượng **Trân trọng Biết ơn** và người **mạnh mẽ chia sẻ** giá trị.</p></div></div></div>
+                <div id="b4-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Quý Nhân</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-orange-400">Là người **giúp đỡ** chúng ta. Gồm 3 cấp độ: Đại, Trung, Tiểu Quý nhân.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-orange-400">**Tri Ân - Trọng Ân - Báo Ân:** Biết ơn, trân trọng và báo đáp bằng cách giúp họ thực hiện ước nguyện cuộc đời.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-orange-400">Quý nhân thích giúp đỡ người **sống có ơn nghĩa** và người có **sự trưởng thành hơn người**.</p></div></div></div>
+                <div id="b4-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Tư duy Bảo hộ Phước báu</h3><p class="mb-4 text-lg">Đây là nhận thức vi tế để không sinh ngạo mạn khi giúp người và không vô ơn khi nhận sự giúp đỡ.</p><div class="grid grid-cols-1 md:grid-cols-2 gap-6"><div class="p-6 bg-blue-100 rounded-xl shadow"><h4 class="font-bold text-xl text-blue-800 mb-2">Ở chiều NHẬN</h4><p class="text-blue-700">Luôn trân trọng biết ơn. Nhìn người giúp mình là Quý nhân, Cao nhân.</p></div><div class="p-6 bg-purple-100 rounded-xl shadow"><h4 class="font-bold text-xl text-purple-800 mb-2">Ở chiều CHO ĐI</h4><p class="text-purple-700">Không tự nhận mình là Quý nhân. Nhận thức rằng người kia nhận được là do **phước báu của họ**.</p></div></div><div class="mt-6 p-4 bg-green-100 rounded-lg text-green-800 font-medium text-center"><p class="italic">"Ai cũng là quý nhân của mình, nhưng mình không là quý nhân của ai hết."</p></div></div>
+                <div id="b4-4" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Bài tập Thực hành</h3><p class="mb-4 text-lg">Để chuyển hóa cuộc sống và các mối quan hệ, hãy bắt đầu hành động ngay hôm nay.</p><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-bold text-slate-800 mb-2">Các bước thực hiện:</p><ol class="list-decimal list-inside space-y-3"><li><strong>Lập danh sách:</strong> Tạo một file chia làm 9 cột, tương ứng với 9 dạng người.</li><li><strong>Liệt kê:</strong> Điền tên những người trong các mối quan hệ của bạn vào các cột tương ứng.</li><li><strong>Lên kế hoạch:</strong> Ghi ra những hành động cụ thể để đối đãi với họ cho phù hợp.</li><li><strong>Hành động:</strong> Chủ động tạo bối cảnh để thực hiện kế hoạch đã vạch ra.</li></ol></div></div>
+                <!-- Buoi 5 -->
+                <div id="b5-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Nhận dạng Nhân Mạch</h3><div class="space-y-4"><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-amber-400">Nhân mạch là người có vai trò **kết nối** trọng điểm, là người sở hữu mạng lưới mối quan hệ xã hội uy tín, chất lượng và có tiếng nói, có trọng lượng.</p><p class="text-slate-700 text-lg">Bản chất cuộc sống được vận hành nhờ nhân mạch.</p><div class="p-4 bg-yellow-100 rounded-lg text-yellow-800 font-medium"><p class="font-bold">Trọng điểm:</p><p>Nhân mạch là Tài mạch (mang lại tiền tài), Nhân duyên là Tài duyên (mang lại cơ hội).</p></div></div></div>
+                <div id="b5-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Đối đãi với Nhân Mạch</h3><div class="space-y-4"><p class="text-slate-700 mb-4">Để giữ gìn và phát triển mối quan hệ với nhân mạch, cần có cách đối đãi phù hợp:</p><ol class="list-none space-y-4"><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">1</span><div class="text-slate-700 text-lg"><strong>Biết trước biết sau:</strong> Luôn ghi nhận và ưu tiên người đã kết nối mình.</div></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">2</span><div class="text-slate-700 text-lg"><strong>Quảng bá hình ảnh của họ:</strong> Giúp nâng cao uy tín cho nhân mạch.</div></li><li class="flex items-start"><span class="flex items-center justify-center bg-indigo-500 text-white rounded-full w-8 h-8 font-bold text-lg mr-4 flex-shrink-0">3</span><div class="text-slate-700 text-lg"><strong>Kết nối họ với những mối quan hệ chất lượng.</strong></div></li></ol></div></div>
+                <div id="b5-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Thu hút Nhân Mạch</h3><p class="mb-4 text-lg">Muốn thu hút được nhân mạch, bản thân mình phải trở thành một nhân mạch.</p><div class="p-6 bg-green-100 rounded-xl shadow"><h4 class="font-bold text-xl text-green-800 mb-2">Trở thành Nhân Mạch</h4><ol class="list-decimal list-inside space-y-2 text-green-700"><li><strong>Chủ động kết nối:</strong> Luôn cởi mở, giao lưu với mọi người.</li><li><strong>Có tâm thức cho mượn mối quan hệ:</strong> Sẵn sàng giới thiệu, kết nối những người trong mạng lưới của mình với nhau.</li><li><strong>Không giữ người cho riêng mình.</strong></li></ol></div></div>
+                <div id="b5-4" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Tâm thức Cho đi & Thu hút</h3><p class="mb-4 text-lg">Bạn phát ra tâm thức nào, bạn sẽ thu hút những con người có cùng tần số đó.</p><div class="bg-gradient-to-br from-purple-500 to-pink-500 text-white p-8 rounded-2xl text-center shadow-2xl"><p class="text-xl font-semibold italic">"Ngay bây giờ, tôi cam kết mang lại giá trị gì cho con người trong tương lai, thì người tương đồng phước báu sẽ đến với mình."</p></div><div class="mt-6 space-y-3 text-slate-700"><p>Thay vì có tâm thức "Tôi sẽ nhận được gì từ bạn?", hãy chuyển sang "Tôi sẽ mang lại giá trị gì cho bạn?".</p></div></div>
+                <!-- Buoi 6 -->
+                <div id="b6-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Thần Tài</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-yellow-400">Là người mà khi có sự hiện diện của họ làm **bội tăng** những gì chúng ta mong muốn.</p><p class="mt-2 text-slate-600 italic">Thần tài được ví như "tên trộm": đến trong âm thầm, ra đi trong mất mát.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi & Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-yellow-400">Năng lượng đặc trưng của Thần tài là **Trân trọng Biết ơn**. Để thu hút và giữ chân Thần tài, chúng ta cần luôn có nguồn năng lượng trân trọng biết ơn.</p></div></div></div>
+                <div id="b6-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Nhân Tài (Giới thiệu)</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-lime-400">Là người **gánh vác** một khía cạnh nào đó trong cuộc sống của chúng ta.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-lime-400">Nhân tài bị thu hút bởi những người có **ước mơ, mục tiêu rõ ràng và đủ lớn**.</p></div></div></div>
+                <div id="b6-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Chìa khóa Thu hút Con người</h3><p class="mb-4 text-lg">Trọng điểm nằm ở việc **biết rõ mong muốn** của bản thân và **cố định tham tưởng**.</p><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-semibold text-slate-800 mb-2">Cố định tham tưởng của bạn vào 4 mục tiêu lớn:</p><ol class="list-decimal list-inside space-y-2"><li><strong>Làm Giàu:</strong> Giàu toàn diện.</li><li><strong>Làm Chủ:</strong> Làm chủ Nội tâm, Sức khỏe, Mối quan hệ, Tài chính.</li><li><strong>Trở Nên:</strong> Trở nên Trí tuệ, Thông thái, Uyên bác, Khôn ngoan.</li><li><strong>Trở Thành:</strong> Trở thành 9 dạng người trong một.</li></ol></div></div>
+                <!-- Buoi 7 -->
+                <div id="b7-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Đối đãi với Nhân Tài</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nguyên tắc cốt lõi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-lime-400">Đối đãi với nhân tài là **nhận lời bồi dưỡng** họ và **giúp họ thực hiện ước mơ**.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Tầm quan trọng của Tả Phù - Hữu Bật</h4><p class="text-slate-700">Để làm lớn, bất kỳ ai cũng cần ít nhất 2 nhân tài gánh vác ở hai vai trò: **Tả Phù** (hỗ trợ bên trong) và **Hữu Bật** (hỗ trợ bên ngoài).</p></div></div></div>
+                <div id="b7-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">8 Tố chất của Nhân Tài</h3><p class="text-slate-600 mb-4">Hãy nhìn thấy, ghi nhận và quảng bá những tố chất này ở người khác để kiến tạo và thu hút nhân tài.</p><div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="p-4 bg-slate-100 rounded-lg">1. Sức học tập vượt trội</div><div class="p-4 bg-slate-100 rounded-lg">2. Sự kiên trì</div><div class="p-4 bg-slate-100 rounded-lg">3. Sự khiêm tốn</div><div class="p-4 bg-slate-100 rounded-lg">4. Trân trọng biết ơn</div><div class="p-4 bg-slate-100 rounded-lg">5. Cống hiến, gánh vác</div><div class="p-4 bg-slate-100 rounded-lg">6. Dũng cảm nhận lỗi</div><div class="p-4 bg-slate-100 rounded-lg">7. Dũng cảm thay đổi</div><div class="p-4 bg-slate-100 rounded-lg">8. (Sẽ được tìm hiểu sau)</div></div></div>
+                <div id="b7-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Minh Sư</h3><p class="mb-4 text-lg">Minh sư là một đại nhân duyên, là người dẫn dắt chúng ta trên hành trình trưởng thành tận cùng.</p><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-semibold text-slate-800 mb-2">3 Tiêu chí nhận dạng Minh Sư:</p><ol class="list-decimal list-inside space-y-3"><li>Là người có **ước mơ bao trùm** ước mơ của bản thân mình.</li><li>Là người có **sự đi trước**, có cảnh giới cuộc sống khác biệt, cách biệt.</li><li>Là người **nhận lời bồi dưỡng và đồng hành** cùng mình.</li></ol></div></div>
+                <div id="b7-4" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Đối đãi & Thu hút Minh Sư</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-green-400">Cách đối đãi tốt nhất với Minh sư là **gánh vác sứ mệnh** và **đồng hành cùng ước mơ** của họ.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-green-400">Minh sư bị thu hút bởi những người có **phước báu** và **khởi được ý niệm** muốn trưởng thành.</p></div></div></div>
+                <!-- Buoi 8 -->
+                <div id="b8-1" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Thầy Cô</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-teal-400">Là người mà khi người khác tiếp xúc, họ **nghe lời, tin tưởng, làm theo và lan tỏa**.</p><p class="mt-2 text-slate-700">Họ là người **"Sản xuất tốt, Kinh doanh giỏi, Giáo dục xuất sắc"**.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-teal-400">**Kính trọng** và **"Ngoan"**: Nghe, tin, làm theo và lan tỏa.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-teal-400">Bị thu hút bởi người có thái độ **cầu thị và khiêm tốn**.</p></div></div></div>
+                <div id="b8-2" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Chuyên Gia</h3><div class="space-y-6"><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Nhận dạng</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-cyan-400">Là người cho chúng ta **tư duy**, giúp **đơn giản hóa** mọi vấn đề phức tạp.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Đối đãi</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-cyan-400">**Tối ưu hóa công cụ, phương tiện** tạo lập giá trị cho họ.</p></div><div><h4 class="font-semibold text-lg text-slate-800 mb-2">Thu hút</h4><p class="p-4 bg-slate-50 rounded-lg border-l-4 border-cyan-400">Phải có **mong muốn tột cùng** và rõ ràng.</p></div></div></div>
+                <div id="b8-3" class="content-panel"><h3 class="text-2xl font-bold text-indigo-600 mb-6">Lộ trình trở thành Chuyên Gia</h3><p class="mb-4 text-lg">Để trở thành chuyên gia trong một lĩnh vực, hãy đi theo lộ trình sau:</p><div class="bg-white p-6 rounded-lg shadow-md mb-6"><p class="font-semibold text-slate-800 mb-2">3 Cấp độ trong Ngành:</p><ol class="list-decimal list-inside space-y-2"><li>**Chuyên gia:** Biến việc phức tạp thành đơn giản.</li><li>**Người trong ngành:** Thường xuyên làm việc đơn giản đó.</li><li>**Người đắc thắng:** Dụng tâm làm việc thường xuyên đó.</li></ol></div><div class="bg-white p-6 rounded-lg shadow-md"><p class="font-semibold text-slate-800 mb-2">6 Chữ Vàng trong Hành động:</p><div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-center mt-4"><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Đơn giản</div><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Vui vẻ</div><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Tin tưởng</div><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Nhẹ nhàng</div><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Thường xuyên</div><div class="p-3 bg-indigo-100 rounded-lg font-medium text-indigo-800">Dụng tâm</div></div></div></div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const tocItems = document.querySelectorAll('.toc-item');
+        const contentPanels = document.querySelectorAll('.content-panel');
+        const sessionHeaders = document.querySelectorAll('.toc-session-header');
+
+        // Function to switch content panel
+        function switchTab(targetId) {
+            contentPanels.forEach(p => p.classList.remove('active'));
+            const targetPanel = document.getElementById(targetId);
+            if (targetPanel) {
+                targetPanel.classList.add('active');
+            }
+        }
+        
+        // Function to handle TOC item click
+        tocItems.forEach(item => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                tocItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+                const targetId = item.getAttribute('data-target');
+                switchTab(targetId);
+            });
+        });
+
+        // Function to handle session header click (accordion)
+        sessionHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                // Optional: close other sessions when one is opened
+                // sessionHeaders.forEach(otherHeader => {
+                //     if (otherHeader !== header) {
+                //         otherHeader.classList.remove('open');
+                //     }
+                // });
+                header.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
